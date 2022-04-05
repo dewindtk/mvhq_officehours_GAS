@@ -8,9 +8,7 @@ const contractOwner = "0x63a934da457e9d19cdc4a6016961b6d571944818";
 const minter = "0x39da0999c77bed5f51ce316259252d0f2244f470";
 const mintPrice = 0;  
 
-// Start test block
 describe("Starting Simulation", function () {
-    // Test case
     // Impersonating owner and declaring contract
     it("Simulation 1", async function () {
         await hre.network.provider.request({
@@ -25,7 +23,7 @@ describe("Starting Simulation", function () {
         //preasleChange = await JJwhatWeMinting.connect(addr1).startPublicMint();
         //preasleChange.wait()
         
-        // Impersonating minter and setting transaction value
+        // Impersonating MINTER and setting transaction value
         await hre.network.provider.request({
             method: "hardhat_impersonateAccount",
             params: [minter],
@@ -34,13 +32,14 @@ describe("Starting Simulation", function () {
         overrides = {};
         overrides.value = ethers.BigNumber.from((mintPrice * 1000000000000000000).toString());
 
-
+        //SET THE TIMESTAMP OF THE NEXT BLOCK
         //await network.provider.send("evm_setNextBlockTimestamp", [1647571225]);
 
         //CHANGE MINT FUNTION AND ARGS
         est = await JJwhatWeMinting.connect(addr2).estimateGas.transferFrom(
             "0x39DA0999c77BEd5f51Ce316259252d0F2244F470", "0xd230dA3Caf56De52722037E401E25C4224daB419", 4094,   overrides);
         console.log("       --------");
-        console.log("  Gas consumption estimate: " + est);
+        console.log("  Now, JJ.....What are we minting?!?!?")
+        //console.log("  Gas consumption estimate: " + est);
     });
 });
