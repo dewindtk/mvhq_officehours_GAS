@@ -36,8 +36,7 @@ describe("Starting Simulation", function () {
         //await network.provider.send("evm_setNextBlockTimestamp", [1647571225]);
 
         //CHANGE MINT FUNTION AND ARGS
-        est = await JJwhatWeMinting.connect(addr2).estimateGas.transferFrom(
-            "0x39DA0999c77BEd5f51Ce316259252d0F2244F470", "0xd230dA3Caf56De52722037E401E25C4224daB419", 4094,   overrides);
+        est = await JJwhatWeMinting.connect(addr2).estimateGas.mint(5, overrides);
         console.log("       --------");
         console.log("  Now, JJ.....What are we minting?!?!?")
         //console.log("  Gas consumption estimate: " + est);
