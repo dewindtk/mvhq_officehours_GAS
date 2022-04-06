@@ -24,7 +24,6 @@ describe("Starting Simulation", function () {
         // SetSaleState Function
          presaleChange = await target.connect(addr1).setAuctionSaleStartTime(1642010400);
          presaleChange.wait();
-         //console.log(presaleChange);
 
         // Impersonating MINTER
         await hre.network.provider.request({

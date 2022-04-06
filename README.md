@@ -19,7 +19,18 @@ Step 2: Hardhat setup
 - Install all hardhat dependencies with the comand:
         ```npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers @openzeppelin/hardhat-upgrades```
     
-Step 3: Configure the simulation scripts simulateGas.js and hardhatconfig.js
+Step 3: Configure the simulation scripts simulateGas.js and hardhatconfig.js with functions:  
+
+- Impersonate accounts:
+    ```await hre.network.provider.request({
+            method: "hardhat_impersonateAccount",
+            params: [contractOwner],
+        });
+        addr1 = await ethers.provider.getSigner(contractOwner);```
+
+
+
+
 
 Step 4: Run the simulation with the command:
         ```npx hardhat test simulateGas```
