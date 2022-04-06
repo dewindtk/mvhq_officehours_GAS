@@ -11,7 +11,7 @@ const mintPrice = 5;
 describe("Starting Simulation", function () {
     
     it("Simulation 1", async function () {
-        // Impersonating contract OWNER
+        // // Impersonating contract OWNER
         await hre.network.provider.request({
             method: "hardhat_impersonateAccount",
             params: [contractOwner],
@@ -19,13 +19,13 @@ describe("Starting Simulation", function () {
         addr1 = await ethers.provider.getSigner(contractOwner);
 
         // // Declaring contract
-         const JJwhatWeMinting = new ethers.Contract(contractAddress, abi);
+         const azuki = new ethers.Contract(contractAddress, abi);
         
-        // //SetSaleState Function
-         presaleChange = await JJwhatWeMinting.connect(addr1).setAuctionSaleStartTime(1642010400);
+        // // //SetSaleState Function
+         presaleChange = await azuki.connect(addr1).setAuctionSaleStartTime(1642010400);
          presaleChange.wait();
          //console.log(presaleChange);
-        
+
         // Impersonating MINTER
         await hre.network.provider.request({
             method: "hardhat_impersonateAccount",
@@ -39,13 +39,12 @@ describe("Starting Simulation", function () {
 
         //Set the timestamp in the next block
         await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
-        await network.provider.send("evm_mine");
 
         //CHANGE MINT FUNTION AND ARGS
-        estimate = await JJwhatWeMinting.connect(addr2).estimateGas.auctionMint(5, overrides);
+        estimation = await azuki.connect(addr2).estimateGas.auctionMint(5, overrides);
 
         console.log("       --------");
         console.log("  Now, JJ.....What are we minting?!?!?")
-        console.log("  Gas consumption estimate: " + estimate);
+        console.log("  Gas consumption estimate: " + estimation);
     });
 });
