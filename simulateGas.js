@@ -11,18 +11,18 @@ const mintPrice = 5;
 describe("Starting Simulation", function () {
     
     it("Simulation 1", async function () {
-        // // Impersonating contract OWNER
+        // Impersonating contract OWNER
         await hre.network.provider.request({
             method: "hardhat_impersonateAccount",
             params: [contractOwner],
         });
         addr1 = await ethers.provider.getSigner(contractOwner);
 
-        // // Declaring contract
-         const azuki = new ethers.Contract(contractAddress, abi);
+        // Declaring contract
+        const target = new ethers.Contract(contractAddress, abi);
         
-        // // //SetSaleState Function
-         presaleChange = await azuki.connect(addr1).setAuctionSaleStartTime(1642010400);
+        // SetSaleState Function
+         presaleChange = await target.connect(addr1).setAuctionSaleStartTime(1642010400);
          presaleChange.wait();
          //console.log(presaleChange);
 
@@ -37,14 +37,14 @@ describe("Starting Simulation", function () {
         overrides = {};
         overrides.value = ethers.BigNumber.from((mintPrice * 1000000000000000000).toString());
 
-        //Set the timestamp in the next block
+        // Set the timestamp in the next block
         await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
 
-        //CHANGE MINT FUNTION AND ARGS
-        estimation = await azuki.connect(addr2).estimateGas.auctionMint(5, overrides);
+        // CHANGE MINT FUNTION AND ARGS
+        estimation = await target.connect(addr2).estimateGas.auctionMint(5, overrides);
 
         console.log("       --------");
         console.log("  Now, JJ.....What are we minting?!?!?")
-        console.log("  Gas consumption estimate: " + estimation);
+        //console.log("  Gas consumption estimate: " + estimation);
     });
 });
