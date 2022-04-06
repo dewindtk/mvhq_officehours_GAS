@@ -19,7 +19,7 @@ Step 2: Hardhat setup
 - Install all hardhat dependencies with the comand:
         ```npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers @openzeppelin/hardhat-upgrades```
     
-Step 3: Configure the simulation script
+Step 3: Configure the simulation scripts simulateGas.js and hardhatconfig.js
 
 Step 4: Run the simulation
     -Run the simulation with the command:
