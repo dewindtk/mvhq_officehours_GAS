@@ -2,6 +2,8 @@ require("@nomiclabs/hardhat-ethers");
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-waffle");
 
+YOURAPIKEY = "vg3WQJGQlJ_PaoMQJPKHM4gnDtxf6a6F"
+
 module.exports = {
   solidity: {
     compilers: [
@@ -39,8 +41,8 @@ module.exports = {
     hardhat: {
       forking: {
         live: false,
-        url: "https://eth-mainnet.alchemyapi.io/v2/vg3WQJGQlJ_PaoMQJPKHM4gnDtxf6a6F",  //TOCHANGE
-        blockNumber:14521500  //TO CHANGE
+        url: "https://eth-mainnet.alchemyapi.io/v2/"+YOURAPIKEY,  //TOCHANGE
+        blockNumber:13988074  //TO CHANGE
       }
     },
   },
