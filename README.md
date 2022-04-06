@@ -21,6 +21,5 @@ Step 2: Hardhat setup
     
 Step 3: Configure the simulation scripts simulateGas.js and hardhatconfig.js
 
-Step 4: Run the simulation
-    -Run the simulation with the command:
+Step 4: Run the simulation with the command:
         ```npx hardhat test simulateGas```
