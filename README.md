@@ -7,16 +7,16 @@ Step 1: Software Installation
 
 
 Step 2: Hardhat setup
-    -Download the scripts from the repo and extract the folder onto the Desktop.
-    -Open cmd or Powershell and navigate INto the extracted folder with the command:
+-Download the scripts from the repo and extract the folder onto the Desktop.
+-Open cmd or Powershell and navigate INto the extracted folder with the command:
         ```cd ...```
         Everything you do below is folder specific, if you would like to start over, 
         Simply delete the folder and start over.
-    -Initialise NodeJS with the command:
+-Initialise NodeJS with the command:
         ```npm init```
-    -Install hardhat with the command:
+-Install hardhat with the command:
         ```npm install --save-dev hardhat```
-    -Install all hardhat dependencies with the comand:
+-Install all hardhat dependencies with the comand:
         ```npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers @openzeppelin/hardhat-upgrades```
     
 Step 3: Configure the simulation script
