@@ -21,10 +21,10 @@ Material for the Office Hours in MVHQ on the 08.04.2022. Includes hardhat Config
     
 **Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js with methods:  
 
-- Declare contracts:
+- Declare contract:
 
 ```
-const targetContract = new ethers.Contract(contractAddress, abi);
+const targetContract = new ethers.Contract(0x0000000000000000000000000000000000000000, abi);
 ```
 
 - Impersonate accounts
@@ -37,15 +37,15 @@ await hre.network.provider.request({
 address1 = await ethers.provider.getSigner(0x0000000000000000000000000000000000000000);
 ```
 
-- Mine a transaction through an impersonation
-
-```
-transaction = await targetContract.connect(address1).functionname(functionArguments);
-transaction.wait();
+- Set timestamp of the next block
 
 ```
 
+await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
+
+```
 - Whenever your transaction has a VALUE (payable amount in GWEI) set overrides as last function argument.
+
 
 ```
 
@@ -55,23 +55,29 @@ overrides.value = ethers.BigNumber.from((mintPrice * 1000000000000000000).toStri
 
 ```
 
-- Set timestamp of the next block
-
-```
-
-await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
-
-```
-
-- Estimate the gas consumption on a transaction and print the result (DOES NOT mine the transaction)
+- Estimate the gas consumption on a transaction (DOES NOT mine the transaction)
 
 ```
 
 estimation = await targetContract.connect(address1).estimateGas.functionName(FunctionArguments);
-Console.log(estimation);
 
 ```
 
+
+- Mine a transaction through an impersonation
+
+```
+transaction = await targetContract.connect(address1).functionname(functionArguments);
+transaction.wait();
+
+```
+
+- Print something in the command line
+
+```
+console.log("something")
+
+```
 
 
 **Step 4**: Run the simulation with the command:

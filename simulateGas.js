@@ -39,6 +39,8 @@ describe("Starting Simulation", function () {
         // Set the timestamp in the next block
         await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
 
+        // Mine a mint  
+
         // CHANGE MINT FUNTION AND ARGS
         estimation = await target.connect(addr2).estimateGas.auctionMint(5, overrides);
 
