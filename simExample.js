@@ -17,8 +17,12 @@ describe("Starting Simulation", function () {
 
         // Impersonate contract OWNER
         
+        await hre.network.provider.request({
+            method: "hardhat_impersonateAccount",
+            params: ["0xd45058bf25bbd8f586124c479d384c8c708ce23a"],
+        });
+        address1 = await ethers.provider.getSigner("0xd45058bf25bbd8f586124c479d384c8c708ce23a");
 
-        
         // SetSaleState
 
 
