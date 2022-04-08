@@ -25,7 +25,7 @@ Material for the Office Hours in MVHQ on the 08.04.2022. Includes hardhat Config
 - Print something in the command line
 
 ```
-console.log("something")
+console.log("something");
 
 ```
 
