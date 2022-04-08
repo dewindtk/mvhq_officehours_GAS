@@ -13,4 +13,4 @@
     between transfering the last token you have minted compared to the first token.
 
 
-Please share & compare your answers in the #solidity chat.
+Please share & compare your answers in the #solidity chat!
