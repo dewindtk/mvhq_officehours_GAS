@@ -7,9 +7,6 @@ const abi = [{"inputs":[{"internalType":"uint256","name":"maxBatchSize_","type":
 describe("Starting Simulation", function () {
     it("Simulation 1", async function () {
 
-        console.log("       --------");
-        console.log("  Now, JJ.....What are we minting?!?!?")
-
         // Declare contract
 
         const azuki = new ethers.Contract(
