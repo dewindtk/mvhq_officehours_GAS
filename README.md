@@ -42,7 +42,7 @@ await hre.network.provider.request({
     method: "hardhat_impersonateAccount",
     params: ["0x0000000000000000000000000000000000000000"],
 });
-address1 = await ethers.provider.getSigner(0x0000000000000000000000000000000000000000);
+address1 = await ethers.provider.getSigner("0x0000000000000000000000000000000000000000");
 ```
 
 - Set timestamp of the next block
