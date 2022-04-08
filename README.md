@@ -19,7 +19,7 @@ Material for the Office Hours in MVHQ on the 08.04.2022. Includes hardhat Config
 - Install all hardhat dependencies with the comand:
         ```npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers @openzeppelin/hardhat-upgrades```
     
-**Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js with methods:  
+**Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js with methods:     
 
 
 - Print something in the command line
@@ -32,7 +32,7 @@ console.log("something");
 - Declare contract:
 
 ```
-const targetContract = new ethers.Contract(0x0000000000000000000000000000000000000000, abi);
+const targetContract = new ethers.Contract("0x0000000000000000000000000000000000000000", abi);
 ```
 
 - Impersonate accounts
