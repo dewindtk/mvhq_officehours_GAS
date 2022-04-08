@@ -75,7 +75,7 @@ estimation = await targetContract.connect(address1).estimateGas.functionName(Fun
 - Mine a transaction through an impersonation
 
 ```
-transaction = await targetContract.connect(address1).functionname(functionArguments);
+transaction = await targetContract.connect(address1).functionname(functionArguments, overides);
 transaction.wait();
 
 ```

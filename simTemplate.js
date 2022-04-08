@@ -38,7 +38,7 @@ describe("Starting Simulation", function () {
 
 
 
-        // CHANGE MINT FUNTION AND ARGS
+        // Simulate mint function
 
         //console.log("  Gas consumption estimate: " );
     });

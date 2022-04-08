@@ -29,24 +29,35 @@ describe("Starting Simulation", function () {
         setSaleState.wait();
 
 
+        // Set the timestamp in the next block
+        
+        await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
+
+
         // Impersonate MINTER
         
-
+        await hre.network.provider.request({
+            method: "hardhat_impersonateAccount",
+            params: ["0xab5801a7d398351b8be11c439e05c5b3259aec9b"],
+        });
+        address2 = await ethers.provider.getSigner("0xab5801a7d398351b8be11c439e05c5b3259aec9b");
 
         // Set transaction VALUE
 
+        overrides = {};
+        overrides.value = ethers.BigNumber.from((5 * 1000000000000000000).toString());
 
 
-        // Set the timestamp in the next block
-        
-
-
-        // Mine a mint 
+        // Mine a mint (optional)
 
 
 
-        // CHANGE MINT FUNTION AND ARGS
+        // Simulate mint function
 
-        //console.log("  Gas consumption estimate: " );
+
+        estimation = await azuki.connect(address2).estimateGas.auctionMint(FunctionArguments);
+
+
+        console.log("  Gas consumption estimate: " + estimation);
     });
 });
