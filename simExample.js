@@ -25,6 +25,8 @@ describe("Starting Simulation", function () {
 
         // SetSaleState
 
+        setSaleState = await azuki.connect(address1).setAuctionSaleStartTime(1642010400);
+        setSaleState.wait();
 
 
         // Impersonate MINTER

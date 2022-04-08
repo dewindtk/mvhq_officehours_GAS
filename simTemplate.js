@@ -22,16 +22,16 @@ describe("Starting Simulation", function () {
 
 
 
+        // Set the timestamp in the next block
+        
+        
+
         // Impersonate MINTER
         
 
 
         // Set transaction VALUE
 
-
-
-        // Set the timestamp in the next block
-        
 
 
         // Mine a mint 

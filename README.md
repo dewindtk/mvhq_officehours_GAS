@@ -49,7 +49,7 @@ address1 = await ethers.provider.getSigner("0x0000000000000000000000000000000000
 
 ```
 
-await network.provider.send("evm_setNextBlockTimestamp", [1642010500]);
+await network.provider.send("evm_setNextBlockTimestamp", [0000000000]);
 
 ```
 - Whenever your transaction has a VALUE (payable amount in GWEI) set overrides as last function argument.
