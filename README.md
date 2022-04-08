@@ -21,6 +21,14 @@ Material for the Office Hours in MVHQ on the 08.04.2022. Includes hardhat Config
     
 **Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js with methods:  
 
+
+- Print something in the command line
+
+```
+console.log("something")
+
+```
+
 - Declare contract:
 
 ```
@@ -69,13 +77,6 @@ estimation = await targetContract.connect(address1).estimateGas.functionName(Fun
 ```
 transaction = await targetContract.connect(address1).functionname(functionArguments);
 transaction.wait();
-
-```
-
-- Print something in the command line
-
-```
-console.log("something")
 
 ```
 
