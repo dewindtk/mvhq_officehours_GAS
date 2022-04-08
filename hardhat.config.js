@@ -2,7 +2,7 @@ require("@nomiclabs/hardhat-ethers");
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-waffle");
 
-YOURAPIKEY = "vg3WQJGQlJ_PaoMQJPKHM4gnDtxf6a6F"
+YOURAPIKEY = "xbNNi6QORYH95QoC6vIDF81fdb52fTbe"
 
 module.exports = {
   solidity: {

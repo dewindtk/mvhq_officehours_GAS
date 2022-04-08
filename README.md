@@ -19,7 +19,16 @@ Material for the Office Hours in MVHQ on the 08.04.2022. Includes hardhat Config
 - Install all hardhat dependencies with the comand:
         ```npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers @openzeppelin/hardhat-upgrades```
     
-**Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js with methods:     
+**Step 3**: Configure the simulation scripts simulateGas.js and hardhatconfig.js.   
+Temporary alchemy API keys (valid for a couple of days):   
+```
+xbNNi6QORYH95QoC6vIDF81fdb52fTbe    
+J3ZLw6VkpFeIMjpASi5R909aNmtt4J7V
+T9tr2Vz56ngd1weSymVyyK76LnT7dfE1
+Jc196Ty9a289WExzhv7n9tKVEnpV43_b
+JNemY7zxf_s_VMtUSeb74DsUYIyuzedA
+```
+Code examples:   
 
 
 - Print something in the command line
