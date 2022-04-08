@@ -50,12 +50,19 @@ describe("Starting Simulation", function () {
 
         // Mine a mint (optional)
 
+        await hre.network.provider.request({
+            method: "hardhat_impersonateAccount",
+            params: ["0xbC5126Ea9D3A9b7e8353051DC646bfC4fC65c1F7"],
+        });
+        address3 = await ethers.provider.getSigner("0xbC5126Ea9D3A9b7e8353051DC646bfC4fC65c1F7");
 
+        firstTx = await azuki.connect(address3).auctionMint(5, overrides);
+        firstTx.wait();
 
         // Simulate mint function
 
 
-        estimation = await azuki.connect(address2).estimateGas.auctionMint(FunctionArguments);
+        estimation = await azuki.connect(address2).estimateGas.auctionMint(5, overrides);
 
 
         console.log("  Gas consumption estimate: " + estimation);
