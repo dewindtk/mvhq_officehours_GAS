@@ -1,7 +1,7 @@
 
 
-1 - How much ETH per NFT will you pay, if you mint 5 NFTs through a 
-    transaction which costs 237000 gas units with which you sent
+1 - How much ETH per NFT will you pay, if you mint 5 free (or 0.15 each) NFTs
+    through a transaction which costs 237000 gas units with which you sent
     3700 GWEI prio fee on a block with 330 GWEI Base fee.
 
 2 - How many gas units would it have cost, if the azuki contract owner minted
