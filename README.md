@@ -76,7 +76,7 @@ overrides.value = ethers.BigNumber.from((mintPrice * 1000000000000000000).toStri
 
 ```
 
-estimation = await targetContract.connect(address1).estimateGas.functionName(FunctionArguments);
+estimation = await targetContract.connect(address1).estimateGas.functionName(FunctionArguments, overrides);
 
 ```
 
