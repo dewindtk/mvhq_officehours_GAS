@@ -91,4 +91,5 @@ transaction.wait();
 
 
 **Step 4**: Run the simulation with the command:
-        ```npx hardhat test simulateGas```
+        ```npx hardhat test simTemplate.js```
+Please replace "simTemplate.js" with the name of your script.
